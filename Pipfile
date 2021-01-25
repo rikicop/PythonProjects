@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+requests = "*"
+lxml = "*"
+bs4 = "*"
+ghost = "*"
+selenium = "*"
+chromedriver = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.7"
