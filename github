@@ -1,0 +1,44 @@
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git add .
+fatal: not a git repository (or any of the parent directories): .git
+
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git init
+Initialized empty Git repository in /home/ricardo/PythonProjects/.git/
+
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$  git add .  
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git commit -am "Primer Commit"
+[master (root-commit) 047f140] Primer Commit
+ 7 files changed, 380 insertions(+)
+ create mode 100644 Pipfile
+ create mode 100644 Pipfile.lock
+ create mode 100644 cotiza.txt
+ create mode 100644 decorator.py
+ create mode 100644 decorator.py~
+ create mode 100644 getHtmlCode.py
+ create mode 100644 getHtmlCode.py~
+
+#Crea un repositorio en tu cuenta github 
+#Te va a selañar dos opciones, esocoges la segunda, te a mostrar algo parecido a esto(subir repositrio desde tu computadora)
+
+git remote add origin https://github.com/rikicop/PythonProjects.git
+
+$ git branch -M main
+$ git push -u origin main
+$ git remote add origin https://github.com/rikicop/PythonProjects.git
+
+
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git branch -M main
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git push -u origin main
+Username for 'https://github.com': rikicop
+Password for 'https://rikicop@github.com': 
+Counting objects: 9, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 33.49 KiB | 5.58 MiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/rikicop/PythonProjects.git
+ * [new branch]      main -> main
+Branch 'main' set up to track remote branch 'main' from 'origin'.
+
+(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ 
+
