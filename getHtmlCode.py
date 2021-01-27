@@ -23,7 +23,7 @@ joined = ''.join(str(e) for e in re_find)
 re_rm_dupl = re.sub(r'\b(\w+)( \1\b)+', r'\1', joined)
 re_wwspace = re_rm_dupl.lstrip()
 
-#CONVERTIR A NUMERO LOTANTE
+#CONVERTIR A NUMERO FLOTANTE
 x=float(re_wwspace)
 print("Tipo de dato:\n")
 print(type(x))
