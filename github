@@ -43,4 +43,4 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 #Actualizar
 $ git add .
 $ git commit -am "modificacion regexStaticFiles"
-$ git push
+$ git push 
