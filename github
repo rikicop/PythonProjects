@@ -1,5 +1,3 @@
-(PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git add .
-fatal: not a git repository (or any of the parent directories): .git
 
 (PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ git init
 Initialized empty Git repository in /home/ricardo/PythonProjects/.git/
@@ -42,3 +40,7 @@ Branch 'main' set up to track remote branch 'main' from 'origin'.
 
 (PythonProjects) ricardo@ricardo-mint:~/PythonProjects$ 
 
+#Actualizar
+$ git add .
+$ git commit -am "modificacion regexStaticFiles"
+$ git push
