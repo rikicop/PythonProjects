@@ -1,9 +1,9 @@
 
 import pandas as pd
 
-a=input("Ingresa Tipo: ")
-b=input("Ingresa Ubicación: ")
-c=input("Ingresa nuevo/usado(n/u): ")
+tipo_form = input("Ingresa Tipo: ")
+ubicacion_form =input("Ingresa Ubicación: ")
+edo_form =input("Ingresa nuevo/usado(n/u): ")
 
 raw_data = {'cod': ['123', '321', '234', '432', '765','555'],
                 'tipo': ['casa', 'casa', 'casa', 'galpon', 'galpon','galpon'],
@@ -13,50 +13,35 @@ raw_data = {'cod': ['123', '321', '234', '432', '765','555'],
 
 df = pd.DataFrame(raw_data, columns = ['cod', 'tipo', 'ubi', 'edo','precio'])
 print(df,"\n")
-#print(df['Comedy_Score'].where(df['Rating_Score'] < 50))
 
-#En el if estan todas las posibilidades
-""" if (a != '') and (b != ''):
-	#EL QUE Es Diferente ahora va a ser igual
-    newdf = df.loc[((df.tipo == a) & (df.ubi == b))]
+
+
+if (tipo_form != '') and (ubicacion_form != '') and (edo_form != ''): 
+    newdf = df.loc[((df.tipo == tipo_form) & (df.ubi == ubicacion_form) & (df.edo == edo_form))]
     print(newdf)
 
-elif (a != '') and (b == ''):
-	#EL QUE Es igual ahora desaparece
-    newdf = df.loc[df.tipo == a]
+elif (tipo_form != '') and (ubicacion_form != '') and (edo_form == ''): 
+    newdf = df.loc[((df.tipo == tipo_form) & (df.ubi == ubicacion_form))]
     print(newdf)
 
-elif (a == '') and (b != ''):
-    newdf = df.loc[df.ubi == b]
-    print(newdf) """
-
-
-if (a != '') and (b != '') and (c != ''): 
-    newdf = df.loc[((df.tipo == a) & (df.ubi == b) & (df.edo == c))]
+elif (tipo_form != '') and (ubicacion_form == '') and (edo_form == ''): 
+    newdf = df.loc[df.tipo == tipo_form]
     print(newdf)
 
-elif (a != '') and (b != '') and (c == ''): 
-    newdf = df.loc[((df.tipo == a) & (df.ubi == b))]
+elif (tipo_form == '') and (ubicacion_form != '') and (edo_form == ''): 
+    newdf = df.loc[df.ubi == ubicacion_form]
     print(newdf)
 
-elif (a != '') and (b == '') and (c == ''): 
-    newdf = df.loc[df.tipo == a]
+elif (tipo_form == '') and (ubicacion_form != '') and (edo_form != ''):
+    newdf = df.loc[((df.ubi == ubicacion_form) & (df.edo == edo_form))]
     print(newdf)
 
-elif (a == '') and (b != '') and (c == ''): 
-    newdf = df.loc[df.ubi == b]
+elif (tipo_form != '') and (ubicacion_form == '') and (edo_form != ''): 
+    newdf = df.loc[((df.tipo == tipo_form) & (df.edo == edo_form))]
     print(newdf)
 
-elif (a == '') and (b != '') and (c != ''):
-    newdf = df.loc[((df.ubi == b) & (df.edo == c))]
-    print(newdf)
-
-elif (a != '') and (b == '') and (c != ''): 
-    newdf = df.loc[((df.tipo == a) & (df.edo == c))]
-    print(newdf)
-
-elif (a == '') and (b == '') and (c != ''): 
-    newdf = df.loc[df.edo == c]
+elif (tipo_form == '') and (ubicacion_form == '') and (edo_form != ''): 
+    newdf = df.loc[df.edo == edo_form]
     print(newdf)
 
 
